@@ -23,11 +23,6 @@ h1 {
 
 nav {
   background-color: #2e2f34;
-  /*   padding: 1rem;
-  position: sticky;
-  z-index: 2;
-  padding: 1rem;
-  top: 0px; */
 }
 
 .logo {
@@ -51,14 +46,16 @@ nav {
 }
 
 .navbar-toggler-icon {
-  color: #fff281;
+  background-color: #fff281;
   text-decoration: #fff281;
-  background-color: #009aca;
+  border-radius: 5px;
+  /*  background-color: #009aca; */
 }
 
 /* sacarle el borde a cuando lo tenes seleccionado
 - lo puse de color gris.*/
 
+/* BOTON DE NAV DE ESCRIBIRSE- DESPUÉS VER DE CAMBIARLO, NO SE DEBEN PISAR LAS CLASES DE BS */
 .btn-primary {
   color: #fff281;
   background-color: #009aca;
@@ -91,16 +88,18 @@ footer {
 
 /* HERO */
 .hero__container {
-  width: 100%;
-  height: 600px;
-  display: flex;
+  /*   width: 100%;
+  height: 600px; */
+  /*   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-}
-
-.hero__image {
+  justify-content: flex-end; */
+  background-image: url(../img/hero.jpg);
   height: 600px;
   width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .hero__box {
@@ -108,10 +107,13 @@ footer {
   padding: 10px;
   position: absolute;
   text-align: center;
+  top: 40%;
+  left: 5%;
+  right: 5%;
 }
 
 .hero__text {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #fff281;
   padding: 0.5rem;
 }
@@ -128,12 +130,14 @@ footer {
 
 @media screen and (min-width: 1024px) {
   .hero__text {
-    font-size: 7.5rem;
+    font-size: 5.5rem;
+    left: 0%;
+    right: 0%;
   }
 
   .hero__button {
     width: 25rem;
-    height: 5rem;
+    height: 4rem;
     font-size: 1.5rem;
   }
 }
@@ -148,10 +152,6 @@ footer {
 }
 
 /* BOX ABONOS */
-
-#abono {
-  background-color: linear-gradient (to left, red, white);
-}
 .abono__container {
   display: inline-block;
   width: 80%;
@@ -248,7 +248,7 @@ footer {
   transition: all 0.3s;
 }
 
-/* MAPA */
+/* CONTACTO/MAPA */
 
 .contacto {
   display: grid;
@@ -266,7 +266,7 @@ footer {
   padding: 10px;
 }
 
-/* FORMULARIO DE INSCRIPCION */
+/* PAGE INSCRIBIRME */
 .form__container {
   display: flex;
   justify-content: center;
@@ -412,66 +412,7 @@ footer {
   padding: 0 0 0 20px;
 }
 
-/* FORMULARIO DE CONSULTA */
-
-input + span {
-  position: relative;
-}
-
-input + span::before {
-  position: absolute;
-  right: -20px;
-  top: 5px;
-}
-*/ input:invalid {
-  border: 2px solid red;
-}
-
-input:invalid + span::before {
-  content: "✖";
-  color: red;
-}
-
-input:valid + span::before {
-  content: "✓";
-  color: green;
-}
-
-.form__button {
-  background-color: #2e2f34;
-  color: white;
-  height: 2.5rem;
-  width: 10rem;
-}
-
-.form__button:hover {
-  background-color: #009aca;
-  transition: all 0.3s;
-}
-
-.form__consulta {
-  width: 420px;
-  color: black;
-  float: center;
-  position: center;
-}
-
-.fieldset__consulta {
-  padding: 10px 50px 10px 50px;
-}
-
-.label__consulta {
-  padding: 10px;
-}
-
-.legend__consulta {
-  padding: 0 10px 0 10px;
-  background-color: white;
-  color: #009aca;
-  font-size: 1.6rem;
-}
-
-/* CLASES */
+/* PAGE CLASES */
 .gallery {
   min-height: 100vh;
   display: grid;
@@ -491,4 +432,165 @@ input:valid + span::before {
   text-align: center;
   background-color: #009aca;
   position: relative;
+}
+
+/* ANIMACION INDEX */
+.ul-anim {
+  display: flex;
+  background-color: #009aca;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.li-anim {
+  list-style: none;
+  color: #fff281;
+  font-size: 35px;
+  letter-spacing: 10px;
+  animation: iluminar 1.4s linear infinite;
+  text-align: center;
+}
+
+.li-anim--oculta {
+  color: #009aca;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .li-anim {
+    font-size: 70px;
+    letter-spacing: 15px;
+  }
+}
+
+@keyframes iluminar {
+  0% {
+    color: #fff281;
+    text-shadow: none;
+  }
+  90% {
+    color: #2e2f34;
+    text-shadow: none;
+  }
+  100% {
+    color: #2e2f34;
+    text-shadow: 0 0 7px #fff281, 0 0 50px #2e2f34;
+  }
+}
+
+.li-anim:nth-child(1) {
+  animation-delay: 0s;
+}
+.li-anim:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.li-anim:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.li-anim:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.li-anim:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.li-anim:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.li-anim:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.li-anim:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.li-anim:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.li-anim:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.li-anim:nth-child(11) {
+  animation-delay: 1s;
+}
+.li-anim:nth-child(12) {
+  animation-delay: 1.2s;
+}
+
+.yoga {
+  background-image: url("../img/yoga.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.pilates {
+  background-image: url("../img/pilates.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.funcional {
+  background-image: url("../img/funcional.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.boxeo {
+  background-image: url("../img/boxeo.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.crossfit {
+  background-image: url("../img/crossfit.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.spinning {
+  background-image: url("../img/spinning.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.btn__clases {
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #009aca;
+  color: #fff281;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn__clases--amarillo {
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  color: #009aca;
+  background-color: #fff281;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
