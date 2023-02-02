@@ -8,17 +8,29 @@ body {
   font-family: "Titillium Web", sans-serif;
 }
 
+h1 {
+  color: #009aca;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  color: #009aca;
+  padding: 0 0 0 20px;
+}
+
+/* NAV BAR */
 header {
   position: sticky;
   z-index: 2;
   top: 0px;
-}
-
-h1 {
-  color: #009aca;
-  text-align: center;
-  font-size: 3.5rem;
-  padding: 20px;
 }
 
 nav {
@@ -27,7 +39,7 @@ nav {
 
 .logo {
   padding: 0;
-  width: 20rem;
+  width: 17rem;
 }
 
 .nav-item .nav-link {
@@ -47,7 +59,6 @@ nav {
 
 .navbar-toggler-icon {
   background-color: #fff281;
-  text-decoration: #fff281;
   border-radius: 5px;
   /*  background-color: #009aca; */
 }
@@ -55,15 +66,37 @@ nav {
 /* sacarle el borde a cuando lo tenes seleccionado
 - lo puse de color gris.*/
 
-/* BOTON DE NAV DE ESCRIBIRSE- DESPUÉS VER DE CAMBIARLO, NO SE DEBEN PISAR LAS CLASES DE BS */
-.btn-primary {
+/* BOTON "INSCRIBIRME" EN LA NAVBAR / BTN BASE */
+.btn__gimnera {
   color: #fff281;
   background-color: #009aca;
+  height: 2.5rem;
+  width: 6rem;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s;
 }
 
-.btn-primary:hover {
+.btn__gimnera:hover {
   background-color: #fff281;
   color: #009aca;
+}
+
+.btn__gimnera--amarillo {
+  background-color: #fff281;
+  color: #009aca;
+  height: 2.5rem;
+  width: 10rem;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s;
+}
+
+.btn__gimnera--amarillo:hover {
+  color: #fff281;
+  background-color: #009aca;
 }
 
 /* FOOTER */
@@ -86,7 +119,7 @@ footer {
 
 /* PAGE INDEX */
 
-/* HERO */
+/* SECTION HERO */
 .hero__container {
   /*   width: 100%;
   height: 600px; */
@@ -120,7 +153,7 @@ footer {
 .hero__button {
   width: 15rem;
   height: 3rem;
-  border-radius: 1.5rem;
+  border-radius: 100px;
   background-color: #009aca;
   color: #fff281;
   border-color: #fff281;
@@ -150,7 +183,7 @@ footer {
   width: 100%;
 }
 
-/* BOX ABONOS */
+/* SECTION ABONOS */
 .abono__container {
   display: inline-block;
   width: 80%;
@@ -247,23 +280,33 @@ footer {
   transition: all 0.3s;
 }
 
-/* CONTACTO/MAPA */
-
-.contacto {
+/* SECTION CONTACTO/MAPA - USE BS*/
+/* .contacto {
   display: grid;
   grid-area: "datos maps" "datos maps";
-}
+} */
 
-.maps {
+/* /* .maps {
   width: 100%;
   height: 250px;
-}
+} 
 
 .container__maps {
   width: 100%;
   margin: 0 auto;
   padding: 10px;
 }
+*/
+/* #contacto {
+  color: #2e2f34;
+  padding: 1rem;
+} 
+
+.contacto__title {
+  font-size: 2rem;
+  color: #009aca;
+  padding: 0 0 0 20px;
+}*/
 
 /* PAGE INSCRIBIRME */
 .form__container {
@@ -281,13 +324,6 @@ footer {
   padding: 20px 40px;
   box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
 }
-
-/* .title {
-  font-size: 3.5rem;
- margin: 20px 0 30px 0; 
-  color: #009aca;
-  text-align: center;
-} */
 
 .inputContainer {
   position: relative;
@@ -352,7 +388,7 @@ footer {
   font-size: 12px;
 }
 
-.button__inscripcion {
+/* .button__inscripcion {
   width: 15rem;
   height: 3rem;
   border-radius: 1.5rem;
@@ -369,8 +405,9 @@ footer {
   width: 19rem;
   text-transform: uppercase;
   transition: all 0.3s;
-}
+} */
 
+/* SECTION CLASES/HORARIOS */
 .pages__button {
   font-size: 2rem;
   text-align: center;
@@ -400,19 +437,8 @@ footer {
   align-content: center;
 }
 
-#contacto {
-  color: #2e2f34;
-  padding: 1rem;
-}
-
-.contacto__title {
-  font-size: 2rem;
-  color: #009aca;
-  padding: 0 0 0 20px;
-}
-
 /* PAGE CLASES */
-.gallery {
+/* .gallery {
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -431,6 +457,82 @@ footer {
   text-align: center;
   background-color: #009aca;
   position: relative;
+} */
+
+.yoga {
+  background-image: url("../img/yoga.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.pilates {
+  background-image: url("../img/pilates.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.funcional {
+  background-image: url("../img/funcional.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.boxeo {
+  background-image: url("../img/boxeo.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.crossfit {
+  background-image: url("../img/crossfit.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.spinning {
+  background-image: url("../img/spinning.jpg");
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.btn__clases {
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #009aca;
+  color: #fff281;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn__clases--amarillo {
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  color: #009aca;
+  background-color: #fff281;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* ANIMACION INDEX */
@@ -502,99 +604,4 @@ footer {
 }
 .li-anim:nth-child(6) {
   animation-delay: 4.5s;
-}
-.li-anim:nth-child(7) {
-  animation-delay: 0.6s;
-}
-.li-anim:nth-child(8) {
-  animation-delay: 0.7s;
-}
-.li-anim:nth-child(9) {
-  animation-delay: 0.8s;
-}
-.li-anim:nth-child(10) {
-  animation-delay: 0.9s;
-}
-.li-anim:nth-child(11) {
-  animation-delay: 1s;
-}
-.li-anim:nth-child(12) {
-  animation-delay: 1.2s;
-}
-
-.yoga {
-  background-image: url("../img/yoga.jpg");
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.pilates {
-  background-image: url("../img/pilates.jpg");
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.funcional {
-  background-image: url("../img/funcional.jpg");
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.boxeo {
-  background-image: url("../img/boxeo.jpg");
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.crossfit {
-  background-image: url("../img/crossfit.jpg");
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.spinning {
-  background-image: url("../img/spinning.jpg");
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.btn__clases {
-  font-size: 1.5rem;
-  height: 3rem;
-  width: 100%;
-  text-align: center;
-  border-radius: 5px;
-  background-color: #009aca;
-  color: #fff281;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.btn__clases--amarillo {
-  font-size: 1.5rem;
-  height: 3rem;
-  width: 100%;
-  text-align: center;
-  border-radius: 5px;
-  color: #009aca;
-  background-color: #fff281;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
