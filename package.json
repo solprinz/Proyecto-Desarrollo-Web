@@ -9,7 +9,9 @@
     "type": "git",
     "url": "git+https://github.com/solprinz/gimnera.git"
   },
-  "keywords": [],
+  "keywords": [
+    "gimnasio"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {

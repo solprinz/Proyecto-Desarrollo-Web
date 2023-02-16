@@ -13,9 +13,16 @@
   backdrop-filter: blur(10px);
   text-align: center;
   width: 100%;
-  height: 9rem;
+  height: 10rem;
   color: #e2e3e8;
   cursor: pointer;
+  font-size: 13px;
+}
+
+@media (min-width: 1048px) {
+  .clases__accordion {
+    font-size: 15px;
+  }
 }
 
 /* PAGE INSCRIBIRME */
@@ -23,16 +30,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 110vh;
-  margin: 50px;
+  @include background;
+  background-image: url("../img/gimnera2.jpg");
 }
 
 .form__inscripcion {
-  background-color: white;
   width: 440px;
   border-radius: 8px;
   padding: 20px 40px;
-  box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
+  color: white;
 }
 
 .inputContainer {
@@ -43,7 +49,6 @@
 }
 
 .input__inscripcion {
-  position: absolute;
   top: 0px;
   left: 0px;
   height: 100%;
@@ -55,6 +60,7 @@
   outline: none;
   background: none;
   z-index: 1;
+  background-color: white;
   &::placeholder {
     color: transparent;
   }
@@ -79,10 +85,12 @@
   font-size: 14px;
   font-weight: 600;
   color: #009aca;
+  border-radius: 5px;
 }
-/* .input__inscripcion:focus {
+
+.input__inscripcion:focus {
   border: 2px solid #009aca;
-} */
+}
 
 .input__inscripcion:not(:placeholder-shown) + .label__inscripcion {
   top: -7px;
@@ -95,4 +103,13 @@
 .text__inscripcion {
   padding: 15px;
   font-size: 12px;
+}
+
+/* PAGE CONTACTO */
+.contacto {
+  background-image: linear-gradient(
+    $secundary-color,
+    $primary-color,
+    $back-color
+  );
 }
