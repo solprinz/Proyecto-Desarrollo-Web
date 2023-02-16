@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.title {
+  color: $primary-color;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  color: $primary-color;
+  padding: 0 0 0 20px;
+}
+
+/* NAV BAR */
+header {
+  position: sticky;
+  z-index: 2;
+  top: 0px;
+  nav {
+    background-color: $back-color;
+    .nav-link {
+      color: $secundary-color;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.logo {
+  padding: 0;
+  width: 17rem;
+}
+
+.navbar-toggler {
+  border: none;
+  color: $back-color;
+}
+.navbar-toggler-icon {
+  background-color: $secundary-color;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+  background-color: $back-color;
+  color: $secundary-color;
+  text-align: center;
+  padding: 20px;
+  .footer-sm {
+    background-color: $back-color;
+    color: $secundary-color;
+    position: center;
+    font-size: 2rem;
+    padding: 10px;
+    list-style: none;
+    text-decoration: none;
+  }
+}

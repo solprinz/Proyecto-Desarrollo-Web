@@ -1,0 +1,16 @@
+@mixin background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+@mixin btn-primary {
+  background-color: $primary-color;
+  color: $secundary-color;
+}
+
+@mixin btn-secundary {
+  color: $primary-color;
+  background-color: $secundary-color;
+}

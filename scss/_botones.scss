@@ -1,0 +1,39 @@
+/* BOTON BASE */
+.btn__gimnera {
+  @include btn-primary;
+  height: 2.5rem;
+  width: 6rem;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s;
+  &:hover {
+    @include btn-secundary;
+  }
+}
+
+.btn__gimnera--reverse {
+  @extend .btn__gimnera;
+  @include btn-secundary;
+  width: 10rem;
+  &:hover {
+    @include btn-primary;
+  }
+}
+
+/* BOTON CLASES */
+.btn__clases {
+  @include btn-primary;
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}
+
+.btn__clases--reverse {
+  @extend .btn__clases;
+  @include btn-secundary;
+}

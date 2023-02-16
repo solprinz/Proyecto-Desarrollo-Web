@@ -1,3 +1,52 @@
+@charset "UTF-8";
+/* COLORES */ /* COLORES */
+/* MIXIN COMBINACION DE COLORES - BACKGROUND */
+/* BOTON BASE - BOTON CLASES */
+/* BOTON BASE */
+.btn__gimnera, .btn__gimnera--reverse, .abono__button {
+  background-color: #009aca;
+  color: #fff281;
+  height: 2.5rem;
+  width: 6rem;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.3s;
+}
+.btn__gimnera:hover, .btn__gimnera--reverse:hover, .abono__button:hover {
+  color: #009aca;
+  background-color: #fff281;
+}
+
+.btn__gimnera--reverse, .abono__button {
+  color: #009aca;
+  background-color: #fff281;
+  width: 10rem;
+}
+.btn__gimnera--reverse:hover, .abono__button:hover {
+  background-color: #009aca;
+  color: #fff281;
+}
+
+/* BOTON CLASES */
+.btn__clases, .btn__clases--reverse {
+  background-color: #009aca;
+  color: #fff281;
+  font-size: 1.5rem;
+  height: 3rem;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+}
+
+.btn__clases--reverse {
+  color: #009aca;
+  background-color: #fff281;
+}
+
+/* HEADER - NAV - FOOTER */
 * {
   margin: 0;
   padding: 0;
@@ -8,18 +57,18 @@ body {
   font-family: "Titillium Web", sans-serif;
 }
 
-h1 {
+.title {
   color: #009aca;
   text-align: center;
   font-size: 2.5rem;
   padding: 20px;
 }
+
 @media (min-width: 768px) {
-  h1 {
+  .title {
     font-size: 3.5rem;
   }
 }
-
 h2 {
   font-size: 2rem;
   color: #009aca;
@@ -32,25 +81,20 @@ header {
   z-index: 2;
   top: 0px;
 }
-
-nav {
+header nav {
   background-color: #2e2f34;
+}
+header nav .nav-link {
+  color: #fff281;
+}
+header nav .nav-link:hover {
+  color: #009aca;
 }
 
 .logo {
   padding: 0;
   width: 17rem;
 }
-
-.nav-item .nav-link {
-  color: #fff281;
-}
-
-/*.nav-link-active {
-  color: #fff281;
-  font-style: underline;
-}
- nav-link active????? */
 
 .navbar-toggler {
   border: none;
@@ -60,43 +104,6 @@ nav {
 .navbar-toggler-icon {
   background-color: #fff281;
   border-radius: 5px;
-  /*  background-color: #009aca; */
-}
-
-/* sacarle el borde a cuando lo tenes seleccionado
-- lo puse de color gris.*/
-
-/* BOTON "INSCRIBIRME" EN LA NAVBAR / BTN BASE */
-.btn__gimnera {
-  color: #fff281;
-  background-color: #009aca;
-  height: 2.5rem;
-  width: 6rem;
-  text-align: center;
-  border-radius: 10px;
-  border: none;
-  transition: all 0.3s;
-}
-
-.btn__gimnera:hover {
-  background-color: #fff281;
-  color: #009aca;
-}
-
-.btn__gimnera--amarillo {
-  background-color: #fff281;
-  color: #009aca;
-  height: 2.5rem;
-  width: 10rem;
-  text-align: center;
-  border-radius: 10px;
-  border: none;
-  transition: all 0.3s;
-}
-
-.btn__gimnera--amarillo:hover {
-  color: #fff281;
-  background-color: #009aca;
 }
 
 /* FOOTER */
@@ -106,8 +113,7 @@ footer {
   text-align: center;
   padding: 20px;
 }
-
-.footer-sm {
+footer .footer-sm {
   background-color: #2e2f34;
   color: #fff281;
   position: center;
@@ -117,22 +123,16 @@ footer {
   text-decoration: none;
 }
 
-/* PAGE INDEX */
-
+/* PÁGINA PRINCIPAL */
 /* SECTION HERO */
 .hero__container {
-  /*   width: 100%;
-  height: 600px; */
-  /*   display: flex;
-  flex-direction: column;
-  justify-content: flex-end; */
-  background-image: url(../img/hero.jpg);
-  height: 600px;
-  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  background-image: url(../img/hero.jpg);
+  height: 600px;
+  width: 100%;
 }
 
 .hero__box {
@@ -159,6 +159,14 @@ footer {
   border-color: #fff281;
   transition: all 0.3s;
 }
+.hero__button:hover {
+  color: #009aca;
+  background-color: #fff281;
+  border-color: #009aca;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  width: 100%;
+}
 
 @media screen and (min-width: 1024px) {
   .hero__text {
@@ -166,147 +174,217 @@ footer {
     left: 0%;
     right: 0%;
   }
-
   .hero__button {
     width: 25rem;
     height: 4rem;
     font-size: 1.5rem;
   }
 }
-
-.hero__button:hover {
-  background-color: #fff281;
-  color: #009aca;
-  border-color: #009aca;
-  text-transform: uppercase;
-  transition: all 0.3s;
-  width: 100%;
-}
-
-/* SECTION ABONOS */
-.abono__container {
-  display: inline-block;
-  width: 80%;
-  margin: 40px;
-}
-
+/* SECTION ABONOS*/
 .abono__box {
-  display: inline-block;
   background-color: #f3f3f3;
-  width: 100%;
+  width: 80%;
   max-width: 600px;
   border-radius: 10px;
-  margin-bottom: 40px;
+  margin: 50px 20px;
   box-shadow: 0px 2px 5px #ddd;
 }
 
-@media screen and (min-width: 768px) {
-  .abono__box {
-    width: 40%;
-    margin: 2%;
-  }
-}
-.abono__header {
+.abono__header, .abono__header--reverse {
   background-color: #2e2f34;
-  padding: 20px 20px 10px 20px;
+  padding: 20px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   color: #f3f3f3;
   text-align: center;
   font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 0;
 }
 
-.abono__box:nth-child(2) .abono__header {
+.abono__header--reverse {
   background-color: #009aca;
 }
 
-.abono__box--basico {
-  text-align: center;
-  color: #009aca;
-  font-size: 20px;
-  margin-bottom: 0;
-  background-color: #2e2f34;
-  padding: 0 0 10px 0;
-}
-
-.abono__box--premium {
-  text-align: center;
-  color: #2e2f34;
-  font-size: 20px;
-  margin-bottom: 0;
-  background-color: #009aca;
-  padding: 0 0 10px 0;
-}
-
-.abono__description {
-  padding: 0 20px 20px 20px;
-}
-
-.abono__description p {
-  padding: 20px 0;
-  margin: 0;
+.abono__item {
+  padding: 10px;
   text-align: center;
   border-top: 1px solid #ddd;
 }
 
 .abono__button {
-  padding: 10px;
-  max-width: 250px;
-  text-align: center;
-  background-color: #fff281;
-  margin: 0 auto 20px;
-  border-radius: 10px;
+  width: 60%;
+  height: 3rem;
   border: 2px solid #009aca;
-  transition: all 0.3s;
 }
 
-.abono__button a {
-  color: #009aca;
-  padding: 10px;
-  font-size: 20px;
-  transition: all 0.3s;
+.red {
+  color: red;
 }
 
-.abono__button:hover {
-  background-color: #009aca;
-  transition: all 0.3s;
-  text-transform: uppercase;
+.green {
+  color: green;
 }
 
-.abono__button:hover a {
-  color: #ddd;
-  transition: all 0.3s;
+/* SECTION CLASES/HORARIOS */
+.clases {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: url("../img/gimnera1.jpg");
+  height: 400px;
 }
 
-/* SECTION CONTACTO/MAPA - USE BS*/
-/* .contacto {
-  display: grid;
-  grid-area: "datos maps" "datos maps";
-} */
+.horarios {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: url("../img/gimnera2.jpg");
+  height: 400px;
+}
 
-/* /* .maps {
+.no-padd {
+  padding: 0;
+  margin: 0;
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* ANIMACION INDEX */
+.ul-anim {
+  display: flex;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 250px;
-} 
-
-.container__maps {
-  width: 100%;
-  margin: 0 auto;
-  padding: 10px;
+  height: 100%;
+  flex-direction: column;
 }
-*/
-/* #contacto {
-  color: #2e2f34;
-  padding: 1rem;
-} 
+.ul-anim li {
+  list-style: none;
+  color: #fff281;
+  font-size: 50px;
+  letter-spacing: 10px;
+  animation: iluminar 3.4s linear infinite;
+  text-align: center;
+}
+.ul-anim li:nth-child(1) {
+  animation-delay: 0s;
+}
+.ul-anim li:nth-child(1):nth-child(2) {
+  animation-delay: 0.9s;
+}
+.ul-anim li:nth-child(1):nth-child(2):nth-child(3) {
+  animation-delay: 1.8s;
+}
+.ul-anim li:nth-child(1):nth-child(2):nth-child(3):nth-child(4) {
+  animation-delay: 2.7s;
+}
+.ul-anim li:nth-child(1):nth-child(2):nth-child(3):nth-child(4):nth-child(5) {
+  animation-delay: 3.6s;
+}
+.ul-anim li:nth-child(1):nth-child(2):nth-child(3):nth-child(4):nth-child(5):nth-child(6) {
+  animation-delay: 4.5s;
+}
 
-.contacto__title {
-  font-size: 2rem;
-  color: #009aca;
-  padding: 0 0 0 20px;
-}*/
+@media (min-width: 768px) {
+  .ul-anim {
+    justify-content: flex-start;
+  }
+  .ul-anim li {
+    font-size: 80px;
+    letter-spacing: 15px;
+  }
+}
+@keyframes iluminar {
+  0% {
+    color: #fff281;
+    text-shadow: none;
+  }
+  90% {
+    color: #009aca;
+    text-shadow: none;
+  }
+  100% {
+    color: #009aca;
+    text-shadow: 0 0 7px #fff281, 0 0 50px #2e2f34;
+  }
+}
+/* HORARIOS */
+@media screen and (max-width: 480px) {
+  table {
+    font-size: 11px;
+  }
+}
+/* DEMÁS PÁGINAS */
+/* PAGE CLASES */
+.yoga {
+  background-image: url("../img/yoga.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+
+.pilates {
+  background-image: url("../img/pilates.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+
+.funcional {
+  background-image: url("../img/funcional.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+
+.boxeo {
+  background-image: url("../img/boxeo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+
+.crossfit {
+  background-image: url("../img/crossfit.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+
+.spinning {
+  background-image: url("../img/spinning.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 400px;
+}
+
+.clases__accordion {
+  position: absolute;
+  top: 62%;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  width: 100%;
+  height: 9rem;
+  color: #e2e3e8;
+  cursor: pointer;
+}
 
 /* PAGE INSCRIBIRME */
 .form__container {
@@ -346,8 +424,7 @@ footer {
   background: none;
   z-index: 1;
 }
-
-::placeholder {
+.input__inscripcion::placeholder {
   color: transparent;
 }
 
@@ -371,10 +448,10 @@ footer {
   font-weight: 600;
   color: #009aca;
 }
-.input__inscripcion:focus {
-  border: 2px solid #009aca;
-}
 
+/* .input__inscripcion:focus {
+  border: 2px solid #009aca;
+} */
 .input__inscripcion:not(:placeholder-shown) + .label__inscripcion {
   top: -7px;
   left: 3px;
@@ -388,220 +465,4 @@ footer {
   font-size: 12px;
 }
 
-/* .button__inscripcion {
-  width: 15rem;
-  height: 3rem;
-  border-radius: 1.5rem;
-  background-color: #009aca;
-  color: #fff281;
-  border-color: #fff281;
-  transition: all 0.3s;
-}
-
-.button__inscripcion:hover {
-  background-color: #fff281;
-  color: #009aca;
-  border-color: #009aca;
-  width: 19rem;
-  text-transform: uppercase;
-  transition: all 0.3s;
-} */
-
-/* SECTION CLASES/HORARIOS */
-.pages__button {
-  font-size: 2rem;
-  text-align: center;
-  position: absolute;
-  color: #fff281;
-  border: #fff281 solid;
-  border-radius: 1.5rem;
-  width: 15rem;
-  height: 3rem;
-  background-color: transparent;
-  align-items: center;
-}
-
-.pages__button:hover {
-  color: #009aca;
-  border-color: #009aca;
-  text-transform: uppercase;
-  transition: all 0.3s;
-}
-
-.no-padd {
-  padding: 0;
-  margin: 0;
-  justify-self: center;
-  align-self: center;
-  align-items: center;
-  align-content: center;
-}
-
-/* PAGE CLASES */
-/* .gallery {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.clases {
-  font-size: 2rem;
-  color: #fff281;
-  text-align: center;
-  background-color: #009aca;
-  position: relative;
-} */
-
-.yoga {
-  background-image: url("../img/yoga.jpg");
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.pilates {
-  background-image: url("../img/pilates.jpg");
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.funcional {
-  background-image: url("../img/funcional.jpg");
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.boxeo {
-  background-image: url("../img/boxeo.jpg");
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.crossfit {
-  background-image: url("../img/crossfit.jpg");
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.spinning {
-  background-image: url("../img/spinning.jpg");
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.btn__clases {
-  font-size: 1.5rem;
-  height: 3rem;
-  width: 100%;
-  text-align: center;
-  border-radius: 5px;
-  background-color: #009aca;
-  color: #fff281;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.btn__clases--amarillo {
-  font-size: 1.5rem;
-  height: 3rem;
-  width: 100%;
-  text-align: center;
-  border-radius: 5px;
-  color: #009aca;
-  background-color: #fff281;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* ANIMACION INDEX */
-.ul-anim {
-  display: flex;
-  /*   background-color: #009aca;
- */
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-}
-
-.li-anim {
-  list-style: none;
-  color: #fff281;
-  font-size: 50px;
-  letter-spacing: 10px;
-  animation: iluminar 3.4s linear infinite;
-  text-align: center;
-}
-
-.li-anim--oculta {
-  color: #009aca;
-  list-style: none;
-}
-@media (min-width: 768px) {
-  .li-anim {
-    font-size: 80px;
-    letter-spacing: 15px;
-  }
-  .ul-anim {
-    justify-content: flex-start;
-  }
-}
-
-@keyframes iluminar {
-  0% {
-    color: #fff281;
-    text-shadow: none;
-  }
-  90% {
-    color: #009aca;
-    text-shadow: none;
-  }
-  100% {
-    color: #009aca;
-    text-shadow: 0 0 7px #fff281, 0 0 50px #2e2f34;
-  }
-}
-
-.li-anim:nth-child(1) {
-  animation-delay: 0s;
-}
-.li-anim:nth-child(2) {
-  animation-delay: 0.9s;
-}
-.li-anim:nth-child(3) {
-  animation-delay: 1.8s;
-}
-.li-anim:nth-child(4) {
-  animation-delay: 2.7s;
-}
-.li-anim:nth-child(5) {
-  animation-delay: 3.6s;
-}
-.li-anim:nth-child(6) {
-  animation-delay: 4.5s;
-}
+/*# sourceMappingURL=style.css.map */

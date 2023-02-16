@@ -1,0 +1,191 @@
+/* SECTION HERO */
+.hero__container {
+  @include background;
+  background-image: url(../img/hero.jpg);
+  height: 600px;
+  width: 100%;
+}
+
+.hero__box {
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: 80%;
+  left: 5%;
+  right: 5%;
+}
+
+.hero__text {
+  font-size: 3rem;
+  color: $secundary-color;
+  padding: 0.5rem;
+}
+
+.hero__button {
+  width: 15rem;
+  height: 3rem;
+  border-radius: 100px;
+  background-color: $primary-color;
+  color: $secundary-color;
+  border-color: $secundary-color;
+  transition: all 0.3s;
+  &:hover {
+    @include btn-secundary;
+    border-color: $primary-color;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__text {
+    font-size: 5.5rem;
+    left: 0%;
+    right: 0%;
+  }
+
+  .hero__button {
+    width: 25rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* SECTION ABONOS*/
+.abono__box {
+  background-color: #f3f3f3;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin: 50px 20px;
+  box-shadow: 0px 2px 5px #ddd;
+}
+
+.abono__header {
+  background-color: $back-color;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #f3f3f3;
+  text-align: center;
+  font-size: 30px;
+}
+
+.abono__header--reverse {
+  @extend .abono__header;
+  background-color: $primary-color;
+}
+
+.abono__item {
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.abono__button {
+  @extend .btn__gimnera--reverse;
+  width: 60%;
+  height: 3rem;
+  border: 2px solid $primary-color;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+/* SECTION CLASES/HORARIOS */
+.clases {
+  @include background;
+  background-image: url("../img/gimnera1.jpg");
+  height: 400px;
+}
+
+.horarios {
+  @include background;
+  background-image: url("../img/gimnera2.jpg");
+  height: 400px;
+}
+
+.no-padd {
+  padding: 0;
+  margin: 0;
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* ANIMACION INDEX */
+.ul-anim {
+  display: flex;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  li {
+    list-style: none;
+    color: $secundary-color;
+    font-size: 50px;
+    letter-spacing: 10px;
+    animation: iluminar 3.4s linear infinite;
+    text-align: center;
+    &:nth-child(1) {
+      animation-delay: 0s;
+      &:nth-child(2) {
+        animation-delay: 0.9s;
+        &:nth-child(3) {
+          animation-delay: 1.8s;
+          &:nth-child(4) {
+            animation-delay: 2.7s;
+            &:nth-child(5) {
+              animation-delay: 3.6s;
+              &:nth-child(6) {
+                animation-delay: 4.5s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .ul-anim {
+    justify-content: flex-start;
+    li {
+      font-size: 80px;
+      letter-spacing: 15px;
+    }
+  }
+}
+
+@keyframes iluminar {
+  0% {
+    color: #fff281;
+    text-shadow: none;
+  }
+  90% {
+    color: #009aca;
+    text-shadow: none;
+  }
+  100% {
+    color: #009aca;
+    text-shadow: 0 0 7px #fff281, 0 0 50px #2e2f34;
+  }
+}
+
+/* HORARIOS */
+@media screen and (max-width: 480px) {
+  table {
+    font-size: 11px;
+  }
+}
