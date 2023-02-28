@@ -1,4 +1,3 @@
-<!-- AGREGAR FAVICON -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -13,8 +12,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <!-- CSS MIO -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- FONT AWESOME -->
@@ -23,13 +21,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
       integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer"/>
     <!-- GOOGLE FONTS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png" />
   </head>
   <!-- COMIENZA EL BODY -->
   <body>
@@ -38,8 +36,7 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"
-            ><img src="./img/logo.png" alt="Logo Gimnera" class="logo"
-          /></a>
+            ><img src="./img/logo.png" alt="Logo Gimnera" class="logo"/></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -47,24 +44,21 @@
             data-bs-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link" href="#">Inicio</a>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="pages/clases.html">Clases</a>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="pages/horarios.html">Horarios</a>
               </li>
-
               <li class="nav-item">
                 <a class="nav-link" href="pages/contacto.html">Contacto</a>
               </li>
@@ -76,10 +70,12 @@
         </div>
       </nav></header>
       <!-- TERMINA EL NAV -->
+
       <main>
         <!-- HERO IMG -->
         <section class="hero__container">
-     <!-- ANIMACION --> <ul class="ul-anim">
+     <!-- animación --> 
+     <ul class="ul-anim">
       <li class="li">UNA </li>
       <li class="li">NUEVA</li>
       <li class="li">ERA EN</li>
@@ -89,114 +85,115 @@
             <a href="./pages/inscribirme.html"
               ><button class="hero__button">
                 ¡Quiero empezar a entrenar!
-              </button></a
-            ></div>
-         
-        </section>
+              </button></a></div>
+            </section>
       </main>
-            <!-- CLASES Y HORARIOS -->
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-12 col-md-6 no-padd clases ">
-                  <a href="./pages/clases.html">
-                    <button class="btn__clases">Clases</button></a >
-                </div>
-                <div class="col-12 col-md-6 no-padd horarios">
-                  <a href="./pages/horarios.html"
-                    ><button class="btn__clases--reverse">Horarios</button></a></div>
+      
+      <!-- CLASES Y HORARIOS -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6 no-padd clases ">
+            <a href="./pages/clases.html">
+              <button class="btn__clases">Clases</button></a>
+            </div>
+            <div class="col-12 col-md-6 no-padd horarios">
+              <a href="./pages/horarios.html">
+                <button class="btn__clases--reverse">Horarios</button></a>
+            </div>
+        </div>
+      </div>
+      
+      <!-- BOX ABONOS -->
+      <section id="abono" class="container">
+        <div class="row">
+
+          <div class="col-12 col-md-6 ">
+            <div class="abono__box">
+              <div class="abono__header">
+                <div>Basico</div>
+                <div>$2999 x mes</div>
+              </div>
+              <div>
+                <p class="abono__item"><i class="fa-sharp fa-solid fa-xmark red"></i> Acceso a todas las clases </p>
+                <p class="abono__item"><i class="fa-sharp fa-solid fa-check green"></i> Acceso a sala de musculación</p>
+                <p class="abono__item"><i class="fa-sharp fa-solid fa-check green"></i> Estacionamiento gratuito</p>
+                <p class="abono__item"><i class="fa-sharp fa-solid fa-check green"></i> Duchas y lockers</p>
+                <div class="abono__item"><a href="./pages/clases.html">
+                  <button class="abono__button">Inscribirme</button></a >
+                </div></div>
               </div>
             </div>
-
-            <!-- ABONO -->
-            <section id="abono" class="container">
-              <div class="row">
-
-                <div class="col-12 col-md-6 ">
-                  <div class="abono__box">
-                    <div class="abono__header">
-                    <div>Basico</div>
-                    <div>$2999 x mes</div>
-                  </div>
-                  <div>
-                    <p class="abono__item"><i class="fa-sharp fa-solid fa-xmark red"></i> Acceso a todas las clases </p>
-                    <p class="abono__item"><i class="fa-sharp fa-solid fa-check green"></i> Acceso a sala de musculación</p>
-                    <p class="abono__item"><i class="fa-sharp fa-solid fa-check green"></i> Estacionamiento gratuito</p>
-                    <p class="abono__item"><i class="fa-sharp fa-solid fa-check green"></i> Duchas y lockers</p>
             
-                  <p class="abono__item"><a href="./pages/clases.html">
-                    <button class="abono__button">Inscribirme</button></a >
-                  </p></div>
-                </div>
-              </div>
-            
-              <div class="col-12 col-md-6 ">
-                <div class="abono__box">
-                  <div class="abono__header--reverse">
+            <div class="col-12 col-md-6 ">
+              <div class="abono__box">
+                <div class="abono__header--reverse">
                   <div>Premium</div>
                   <div>$3999 x mes</div>
                 </div>
                 <div>
                   <p class="abono__item"><i class="fa-sharp fa-solid fa-check green"></i> Acceso a todas las clases</p>
                   <p class="abono__item"><i class="fa-sharp fa-solid fa-check green"></i> Acceso a sala de musculación</p>
-                    <p class="abono__item"><i class="fa-sharp fa-solid fa-check green"></i> Estacionamiento gratuito</p>
-                    <p class="abono__item"><i class="fa-sharp fa-solid fa-check green"></i> Duchas y lockers</p>
-          
-                <p class="abono__item"><a href="./pages/clases.html">
+                  <p class="abono__item"><i class="fa-sharp fa-solid fa-check green"></i> Estacionamiento gratuito</p>
+                  <p class="abono__item"><i class="fa-sharp fa-solid fa-check green"></i> Duchas y lockers</p>
+                  <div class="abono__item"><a href="./pages/clases.html">
                   <button class="abono__button">Inscribirme</button></a >
-                </p></div></div></div></div></section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-     <!--CONTACTO/ MAPA -->
-      <section id="contacto">
-        <div class="container mb-4">
-          <div class="row g-4">
+     <!--CONTACTO / MAPA -->
+     <section id="contacto">
+      <div class="container mb-4">
+        <div class="row g-4">
           <div class="col-md">
             <h2 class="contacto__title mb-4">Contacto:</h2>
             <ul>
-          <li>Dirección: Calle 1234, Rosario - Santa Fe.</li>
-          <hr>
-          <li>Teléfono: 341-2345678</li>
-          <hr>
-          <li>E-mail: gimnera_rosario@hotmail.com</li>
-          <hr>
-        </ul>
-        <a href="./pages/contacto.html"><button class="btn__gimnera--reverse">Enviar consulta</button></a>
-      </div>
-        <div class="col-md">
-          <iframe
+              <li>Dirección: Calle 1234, Rosario - Santa Fe.</li>
+              <hr>
+              <li>Teléfono: 341-2345678</li>
+              <hr>
+              <li>E-mail: gimnera_rosario@hotmail.com</li>
+              <hr>
+            </ul>
+            <a href="./pages/contacto.html"><button class="btn__gimnera--reverse">Enviar consulta</button></a>
+          </div>
+          <div class="col-md">
+            <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53570.71396679973!2d-60.71793361040331!3d-32.94653079078243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab15def14419%3A0x97324161fb3ed066!2sCentro%2C%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1673278354832!5m2!1ses-419!2sar"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
-          width="100%" height="100%"
-          ></iframe>
+          width="100%" height="100%"></iframe>
         </div>
       </div>
     </div>
   </section>
 </header>
 
-     <!---COMIENZA EL FOOTER--->
-     <footer>
-      <div>Seguinos en nuestras redes</div>
-      <div class="footer-sm">
-        <a class="footer-sm" href="https://www.instagram.com">
-          <i class="fa-brands fa-instagram"></i></a>
-        <a class="footer-sm" href="https://www.facebook.com">
-          <i class="fa-brands fa-facebook"></i></a>
-        <a class="footer-sm" href="https://www.twitter.com">
-          <i class="fa-brands fa-twitter"></i></a>
-        <a class="footer-sm" href="https://www.youtube.com">
-          <i class="fa-brands fa-youtube"></i></a>
-        <a class="footer-sm" href="#"><i class="fa-brands fa-whatsapp"></i></a>
-      </div>
-      <div>Copyright 2023 - Sol Prinzen</div>
-    </footer>
-
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"
-  ></script>
-
-  </body>
+<!---FOOTER--->
+<footer>
+  <div>Seguinos en nuestras redes</div>
+  <div class="footer-sm">
+    <a class="footer-sm" href="https://www.instagram.com">
+      <i class="fa-brands fa-instagram"></i></a>
+    <a class="footer-sm" href="https://www.facebook.com">
+      <i class="fa-brands fa-facebook"></i></a>
+    <a class="footer-sm" href="https://www.twitter.com">
+      <i class="fa-brands fa-twitter"></i></a>
+    <a class="footer-sm" href="https://www.youtube.com">
+      <i class="fa-brands fa-youtube"></i></a>
+    <a class="footer-sm" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+  <div>Copyright 2023 - Sol Prinzen</div>
+</footer>
+<!-- JAVA -->
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+crossorigin="anonymous"
+></script>
+</body>
 </html>
