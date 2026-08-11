@@ -1,22 +1,34 @@
-# GIMNERA
+# 🏋️‍♀️ Gimnera — Sitio Web para Gimnasio & Fitness
 
-### Proyecto final del curso de Desarrollo Web
+> Sitio web institucional y promocional desarrollado como proyecto final del curso de Desarrollo Web. Presenta un diseño moderno y adaptativo centrado en la experiencia de usuario para clientes de un centro deportivo.
 
-![](https://res.cloudinary.com/diiphots8/image/upload/v1724193764/Captura_de_pantalla_2024-08-20_a_las_19.40.10_bh5mpg.png)
+![Gimnera Preview](https://res.cloudinary.com/diiphots8/image/upload/v1724193764/Captura_de_pantalla_2024-08-20_a_las_19.40.10_bh5mpg.png)
 
-#### Desarrollada con HTML y  CSS 
+---
 
-### Librerías utilizadas:
+## 🌐 Sitio Web
+* 🔗 **[Visitar Sitio Web Desplegado](https://gimnera.netlify.app)**
 
-- Bootstrap
-- Font Awesome
-- Google Fonts
-- SCSS
+---
 
-## Visite el sitio
+## 🛠️ Tecnologías & Librerías Utilizadas
 
-[Sitio web](https://gimnera.netlify.app)
+* **Maquetación & Estilos:** HTML5, CSS3, SCSS (SASS)
+* **Framework CSS:** Bootstrap
+* **Componentes & Tipografía:** Font Awesome, Google Fonts
+* **Hosting:** Netlify
 
-[Github Autor](https://github.com/solprinz)
+---
 
-#### 
+## 💻 Instalación y Ejecución Local
+
+1. Clonar el repositorio:
+   ```bash
+   git clone [https://github.com/solprinz/GIMNERA.git](https://github.com/solprinz/GIMNERA.git)
+
+2. Abrir el archivo index.html en el navegador.
+
+---
+
+## 👤 Autora
+Sol Prinzen — Desarrollo Frontend
